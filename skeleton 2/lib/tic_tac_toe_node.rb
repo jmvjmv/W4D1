@@ -16,9 +16,32 @@ class TicTacToeNode
   def winning_node?(evaluator)
   end
 
+  # def empty?
+  #   return true if position == "_"
+  #   false
+  # end
+
   # This method generates an array of all moves that can be made after
   # the current move.
   def children
-    
+    arr = []
+
+    (0..2).each do |rows|
+      (0..2).each do |cols|
+        indices = [rows,cols]
+
+        
+      end
+    end
+
+
+
+
+    arr
   end
 end
+#[
+# [X _ _]
+# [_ _ _]
+# [_ _ _]
+#]
