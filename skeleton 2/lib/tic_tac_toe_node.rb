@@ -30,12 +30,15 @@ class TicTacToeNode
       (0..2).each do |cols|
         indices = [rows,cols]
 
-        
+        next unless board.empty?(indices)
+
+        new_board = board.dup
+        new_board[indices] = self.next_mover_mark
+        next_mover_mark = (self.next_mover_mark == :x ? :o : :x)
+
+        children << TicTacToeNode.new(new_board, next_mover_mark, pos)
       end
     end
-
-
-
 
     arr
   end
